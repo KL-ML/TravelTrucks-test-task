@@ -1,5 +1,19 @@
 .section {
-  min-height: 100vh;
+  padding-left: var(--section-side);
+  padding-right: var(--section-side);
+}
+.hero {
+  max-width: var(--container-width);
+  height: var(--hero-height);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url('../../images/Hero/hero-bg-desk@x1.jpg');
+}
+@media only screen and (min-resolution: 192dpi) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../../images/Hero/hero-bg-desk@x2.jpg');
+  }
 }

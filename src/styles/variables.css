@@ -4,7 +4,7 @@
   --text-color: #475467;
   --gray-color: #6c717b;
   --button-color: #e44848;
-  --button-hiver-color: #d84343;
+  --button-hover-color: #d84343;
   --rating-color: #ffc531;
   --gray-light-color: #dadde1;
   --badges-color: #f2f4f7;
@@ -41,7 +41,8 @@
 --form-gap: 14px;
 
 /* sizes */
---container-width: 1312px;
+--container-width: 1440px;
+--hero-height: 696px;
 --image-width: 292px;
 --input-height: 60px;
 --input-textaria-height: 118px;
@@ -51,6 +52,7 @@
 --catalog-img-height: 320px;
 --item-page-image-height: 312px;
 --button-height: 56px;
+--button-min-width: 166px;
 --filters-btn-wdt: 112px;
 --filters-btn-ht: 96px;
 --grey-btn-height: 48px;
@@ -59,4 +61,5 @@
 --icon-sm: 20px;
 --icon-x-sm: 16px;
 --avatar: 60px;
+
 }

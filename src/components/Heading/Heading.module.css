@@ -1,0 +1,10 @@
+.heroH1 {
+    font: var(--h1-font-style);
+    color: var(--inputs-color);
+    margin-bottom: 16px;
+}
+.heroH2 {
+    font: var(--h2-font-style);
+    color: var(--inputs-color);
+    margin-bottom: 40px;
+}
