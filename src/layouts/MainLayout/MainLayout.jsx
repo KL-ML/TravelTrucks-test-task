@@ -1,17 +1,18 @@
-import Section from '../../components/Section/Section';
+import Container from '../../components/Container/Container';
 import Header from '../../components/Header/Header';
 import Main from '../../components/Main/Main';
 import { Outlet } from 'react-router-dom';
+import logoImgPath from '../../images/logo.svg';
 
 export default function MainLayout() {
   return (
     <>
-      <Section>
-        <Header />
+      <Container>
+        <Header logoImgPath={logoImgPath} />
         <Main>
           <Outlet />
         </Main>
-      </Section>
+      </Container>
     </>
   );
 }
