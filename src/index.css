@@ -1,0 +1,18 @@
+@import './styles/variables.css';
+@import './styles//reset.css';
+
+html {
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+body {
+  font: var(--body-font-style);
+  background-color: var(--white-color);
+  color: var(--main-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

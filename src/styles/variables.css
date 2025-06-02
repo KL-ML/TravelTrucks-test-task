@@ -1,0 +1,62 @@
+:root {
+  /* color variables */
+  --main-color: #101828;
+  --text-color: #475467;
+  --gray-color: #6c717b;
+  --button-color: #e44848;
+  --button-hiver-color: #d84343;
+  --rating-color: #ffc531;
+  --gray-light-color: #dadde1;
+  --badges-color: #f2f4f7;
+  --inputs-color: #f7f7f7;
+  --white-color: #ffffff;
+
+  /* font-family */
+  --family: Inter, sans-serif;
+
+  /* font: font-weight font-size/line-height */
+  --h1-font-style: 600 48px/0.67 var(--family);
+  --h2-font-style: 600 24px/1.33 var(--family);
+  --h3-font-style: 600 20px/1.2 var(--family);
+  --body-font-style: 400 16px/1.5 var(--family);
+  --body2-font-style: 500 16px/1.5 var(--family);
+
+  /* transition */
+  --transition: 250ms, easy-in-out;
+
+/* spases */
+--section-side: 64px;
+--sections-between: 60px;
+--gap-extra-large: 52px;
+--gap-large: 48px;
+--gap-large-sm: 44;
+--gap-medium: 40px;
+--gap-regular-lg: 32px;
+--gap-regular-md: 28px;
+--gap-regular: 24px;
+--gap-regular-sm: 16px;
+--gap-small-lg: 12px;
+--gap-small: 8px;
+--gap-extra-sm: 4px;
+--form-gap: 14px;
+
+/* sizes */
+--container-width: 1312px;
+--image-width: 292px;
+--input-height: 60px;
+--input-textaria-height: 118px;
+--form-sector-width: 641px;
+--reviews-sector-width: 631px;
+--catalog-width: 888px;
+--catalog-img-height: 320px;
+--item-page-image-height: 312px;
+--button-height: 56px;
+--filters-btn-wdt: 112px;
+--filters-btn-ht: 96px;
+--grey-btn-height: 48px;
+--icon-lg: 32px;
+--icon-md: 24px;
+--icon-sm: 20px;
+--icon-x-sm: 16px;
+--avatar: 60px;
+}
