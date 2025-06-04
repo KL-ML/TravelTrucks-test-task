@@ -4,6 +4,7 @@
   justify-content: center;
   height: var(--button-height);
   min-width: var(--button-min-width);
+  width: fit-content;
   padding: 16px 48px;
   font: var(--body2-font-style);
   border-radius: 50px;

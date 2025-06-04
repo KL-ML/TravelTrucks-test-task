@@ -1,0 +1,13 @@
+.camperWrap {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+.imagesList {
+    display: flex;
+    gap: 48px;
+    height: 312px;
+    overflow-x: scroll;
+    padding-bottom: 12px;
+    margin-bottom: -12px;
+}

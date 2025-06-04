@@ -1,0 +1,8 @@
+.description {
+    color: var(--text-color);
+}
+.form {
+    color: var(--gray-color);
+    margin-top: 8px;
+    margin-bottom: 24px;
+}

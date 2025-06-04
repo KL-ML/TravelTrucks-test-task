@@ -1,0 +1,19 @@
+.formWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 44px 57px;
+  border: 1px solid var(--gray-light-color);
+  border-radius: 10px;
+  
+}
+.bookingForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: var(--gray-color);
+}
+.btnWrap {
+    margin: 0 auto;
+}

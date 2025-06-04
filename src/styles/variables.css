@@ -3,6 +3,7 @@
   --main-color: #101828;
   --text-color: #475467;
   --gray-color: #6c717b;
+  --gray-color-light: #6c717b1a;
   --button-color: #e44848;
   --button-hover-color: #d84343;
   --rating-color: #ffc531;
@@ -28,7 +29,7 @@
 --section-side: 64px;
 --sections-between: 60px;
 --gap-extra-large: 52px;
---gap-large: 48px;
+--section-top: 48px;
 --gap-large-sm: 44;
 --gap-medium: 40px;
 --gap-regular-lg: 32px;
@@ -43,6 +44,7 @@
 /* sizes */
 --container-width: 1440px;
 --hero-height: 696px;
+--filters-widget-wd: 360px;
 --image-width: 292px;
 --input-height: 60px;
 --input-textaria-height: 118px;

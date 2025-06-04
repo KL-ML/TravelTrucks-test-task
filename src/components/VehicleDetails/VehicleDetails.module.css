@@ -1,0 +1,10 @@
+.headingWrap {
+    margin-bottom: 24px;
+}
+.detailItem {
+    display: flex;
+    justify-content: space-between;
+}
+.detailItem:not(:last-child) {
+    margin-bottom: 16px;
+}

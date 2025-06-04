@@ -1,0 +1,26 @@
+.camperDetailsNav {
+  display: flex;
+  gap: 40px;
+  font: var(--h3-font-style);
+  border-bottom: 1px solid var(--gray-light-color);
+}
+.link {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 24px;
+}
+.active::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--button-color);
+}
+.detailsWrap {
+  display: grid;
+  grid-template-columns: 1fr 641px;
+  gap: 40px;
+  margin-top: 44px;
+}

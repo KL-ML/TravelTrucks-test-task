@@ -8,3 +8,22 @@
     color: var(--inputs-color);
     margin-bottom: 40px;
 }
+.cardH2 {
+    font: var(--h2-font-style);
+}
+.headerH3 {
+    font: var(--h3-font-style);
+}
+.headerH4 {
+    font: var(--body2-font-style);
+    color: var(--main-color);
+}
+.underlined {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--gray-light-color);
+
+}
+.filtersB2 {
+    font: var(--body2-font-style);
+    color: var(--text-color);
+}

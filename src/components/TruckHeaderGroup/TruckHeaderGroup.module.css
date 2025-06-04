@@ -1,0 +1,12 @@
+.cardHeaderGroup {
+    display: flex;
+    justify-content: space-between;
+}
+.cardDetails {
+    display: flex;
+    gap: 16px;
+}
+.column {
+    flex-direction: column;
+    gap: 16px;
+}

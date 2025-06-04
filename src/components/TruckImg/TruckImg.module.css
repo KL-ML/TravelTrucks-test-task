@@ -1,0 +1,7 @@
+.imgWrap {
+    width: var(--image-width);
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--gray-light-color);
+}

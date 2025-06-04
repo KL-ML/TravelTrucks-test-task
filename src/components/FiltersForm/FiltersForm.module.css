@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+}
+
+/* select customize */
+select,
+::picker(select) {
+  appearance: base-select;
+}
+.selectWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.selectLable {
+  width: fit-content;
+  color: var(--gray-color);
+}
+.select {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--inputs-color);
+  color: var(--gray-color);
+  padding: 14px 18px;
+  transition: color var(--transition);
+  height: 56px;
+}
+
+select:hover,
+select:focus {
+  color: var(--main-color);
+}
+select::picker-icon {
+  display: none;
+}
+::picker(select) {
+  border: none;
+}
+option {
+  display: flex;
+  justify-content: flex-start;
+  color: var(--gray-color);
+  gap: 8px;
+  border: 1px solid var(--white-color);
+  background: var(--inputs-color);
+  padding: 10px;
+  transition: 0.4s;
+}
+option:first-of-type {
+  border-radius: 12px 12px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 12px 12px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+option:hover,
+option:focus {
+  color: var(--main-color);
+}
+option:checked {
+  color: var(--main-color);
+}
+option::checkmark {
+  display: none;
+}
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+::picker(select):popover-open {
+  opacity: 1;
+}
+::picker(select) {
+  top: calc(anchor(bottom) + 1px);
+  left: anchor(0);
+}
+
+/* checkbox customize */
+.checkboxGroup {
+  height: 376px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.checkboxWrap {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 124px;
+  row-gap: 104px;
+  margin-top: 24px;
+}
+.checkboxLable {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.checkboxLable .checkfield {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  height: 96px;
+  width: 112px;
+  font: var(--body2-font-style);
+  background-color: var(--white-color);
+  border: 1px solid var(--gray-light-color);
+  border-radius: 12px;
+  transition: border-color var(--transition);
+}
+.checkboxLable:hover .checkfield ~ .checkmark {
+  border-color: var(--button-color);
+}
+.checkboxLable .checkfield:checked ~ .checkmark {
+  border-color: var(--main-color);
+  transition: border-color var(--transition);
+}
+.checkboxLable:hover .checkfield:checked ~ .checkmark {
+  border-color: var(--button-hover-color);
+}
+
+/* radio customize */
+.radioGroup {
+  height: 168px;
+  margin-bottom: 40px;
+}

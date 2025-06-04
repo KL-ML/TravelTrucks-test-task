@@ -1,6 +1,7 @@
 .section {
   padding-left: var(--section-side);
   padding-right: var(--section-side);
+  margin-top: var(--section-top);
 }
 .hero {
   max-width: var(--container-width);
@@ -10,10 +11,23 @@
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('../../images/Hero/hero-bg-desk@x1.jpg');
+  margin-top: 0;
 }
 @media only screen and (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('../../images/Hero/hero-bg-desk@x2.jpg');
   }
+}
+.catalog {
+  display: grid;
+  grid-template-columns: var(--filters-widget-wd) 1fr;
+  gap: var(--section-side);
+  margin-bottom: 52px;
+}
+.camper {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 80px;
 }

@@ -1,0 +1,263 @@
+import css from './FiltersForm.module.css';
+
+import { Field, Form, Formik } from 'formik';
+import Heading from '../Heading/Heading';
+import Button from '../Button/Button';
+
+export default function FiltersForm() {
+  return (
+    <>
+      <Formik
+        initialValues={{
+          location: '',
+          equipment: [],
+          type: '',
+        }}
+        onSubmit={(values, { setSubmitting }) => {
+          setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+          }, 400);
+        }}
+      >
+        {({ isSubmitting }) => (
+          <Form>
+            <div className={css.selectWrap}>
+              <label className={css.selectLable} htmlFor="location">
+                Location
+              </label>
+              <Field
+                className={css.select}
+                component="select"
+                id="location"
+                name="location"
+              >
+                <option id="location" value="">
+                  City
+                </option>
+                <option id="location" value="dnipro">
+                  Dnipro, Ukraine
+                </option>
+                <option id="location" value="kharkiv">
+                  Kharkiv, Ukraine
+                </option>
+                <option id="location" value="kyiv">
+                  Kyiv, Ukraine
+                </option>
+                <option id="location" value="lviv">
+                  Lviv, Ukraine
+                </option>
+                <option id="location" value="odesa">
+                  Odesa, Ukraine
+                </option>
+                <option id="location" value="poltava">
+                  Poltava, Ukraine
+                </option>
+                <option id="location" value="sumy">
+                  Sumy, Ukraine
+                </option>
+              </Field>
+            </div>
+            <Heading tag="h2" variant="filtersB2" textColor>Filters</Heading>
+            <div className={css.checkboxGroup}>
+              <Heading
+                tag="h3"
+                variant="headerH3"
+                underlined
+                id="checkbox-group"
+              >
+                Vehicle equipment
+              </Heading>
+              <div
+                className={css.checkboxWrap}
+                role="group"
+                aria-labelledby="checkbox-group"
+              >
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="AC"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    AC
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="bathroom"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Bathroom
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="kitchen"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Kitchen
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="TV"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    TV
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="radio"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Radio
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="refrigerator"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Refrigerator
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="microwave"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Microwave
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="gas"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Gas
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="checkbox"
+                    name="equipment"
+                    value="water"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Water
+                  </span>
+                </label>
+              </div>
+            </div>
+            <div className={css.radioGroup}>
+              <Heading tag="h3" variant="headerH3" underlined id="radio-group">
+                Vehicle type
+              </Heading>
+              <div
+                className={css.checkboxWrap}
+                role="group"
+                aria-labelledby="radio-group"
+              >
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="radio"
+                    name="type"
+                    value="alcove"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Alcove
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="radio"
+                    name="type"
+                    value="fullyIntegrated"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Fully Integrated
+                  </span>
+                </label>
+                <label className={css.checkboxLable}>
+                  <Field
+                    className={css.checkfield}
+                    type="radio"
+                    name="type"
+                    value="panelTruck"
+                  />
+                  <span className={css.checkmark}>
+                    {/* <svg>
+                      <use />
+                    </svg> */}
+                    Van
+                  </span>
+                </label>
+              </div>
+            </div>
+            <Button variant="filled" text="Submit" type="submit" disabled={isSubmitting} />
+          </Form>
+        )}
+      </Formik>
+    </>
+  );
+}
