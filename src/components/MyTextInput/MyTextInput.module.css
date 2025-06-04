@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+.inputWrap {
+    width: 100%;
+}
+.textInput {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: none;
+  outline: none;
+  border-radius: 12px;
+  background-color: var(--inputs-color);
+  width: 100%;
+  font: var(--body-font-style);
+  color: var(--gray-color);
+  padding: 18px;
+}
+
+.textarea {
+  resize: none;
+  height: 118px;
+}
