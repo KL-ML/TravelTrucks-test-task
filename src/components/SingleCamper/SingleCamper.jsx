@@ -1,37 +1,39 @@
-// import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Description from '../Description/Description';
 import TruckHeaderGroup from '../TruckHeaderGroup/TruckHeaderGroup';
 import TruckImg from '../TruckImg/TruckImg';
 import css from './SingleCamper.module.css';
-// import { selectSingleCamper } from '../../redux/singleCamperSlice';
+import { selectCamper } from '../../redux/camperSlice.js';
+import { nanoid } from 'nanoid';
 
 export default function SingleCamper() {
-  // const camper = useSelector(selectSingleCamper);
-  // console.log(camper);
+  const camper = useSelector(selectCamper);
+  const { name, price, rating, location, reviews, gallery, description } =
+    camper;
   return (
-    <div className={css.camperWrap}>
-      <TruckHeaderGroup variant="column" />
-      <ul className={css.imagesList}>
-        <li>
-          <TruckImg />
-        </li>
-        <li>
-          <TruckImg />
-        </li>
-        <li>
-          <TruckImg />
-        </li>
-        <li>
-          <TruckImg />
-        </li>
-      </ul>
-      <Description>
-        Embrace simplicity and freedom with the Mavericks panel truck, an ideal
-        choice for solo travelers or couples seeking a compact and efficient way
-        to explore the open roads. This no-frills yet reliable panel truck
-        offers the essentials for a comfortable journey, making it the perfect
-        companion for those who value simplicity and functionality.{' '}
-      </Description>
-    </div>
+    <>
+      {camper.length === 0 ? (
+        <p>loading...</p>
+      ) : (
+        <div className={css.camperWrap}>
+          <TruckHeaderGroup
+            name={name}
+            price={price}
+            rating={rating}
+            location={location}
+            reviews={reviews.length}
+            variant="column"
+          />
+          <ul className={css.imagesList}>
+            {gallery.map(img => (
+              <li key={nanoid()}>
+                <TruckImg img={img.thumb} />
+              </li>
+            ))}
+          </ul>
+          <Description>{description}</Description>
+        </div>
+      )}
+    </>
   );
 }

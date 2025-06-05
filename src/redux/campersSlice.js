@@ -23,6 +23,8 @@ const campersSlice = createSlice({
   },
 });
 
+
+
 export const campersSliceReducer = campersSlice.reducer;
 export const selectCampers = state => state.campers.items;
 export const selectIsLoading = state => state.campers.isLoading;
