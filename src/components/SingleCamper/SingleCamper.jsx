@@ -1,9 +1,13 @@
+// import { useSelector } from 'react-redux';
 import Description from '../Description/Description';
 import TruckHeaderGroup from '../TruckHeaderGroup/TruckHeaderGroup';
 import TruckImg from '../TruckImg/TruckImg';
 import css from './SingleCamper.module.css';
+// import { selectSingleCamper } from '../../redux/singleCamperSlice';
 
 export default function SingleCamper() {
+  // const camper = useSelector(selectSingleCamper);
+  // console.log(camper);
   return (
     <div className={css.camperWrap}>
       <TruckHeaderGroup variant="column" />

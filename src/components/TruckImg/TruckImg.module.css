@@ -5,3 +5,7 @@
     overflow: hidden;
     background-color: var(--gray-light-color);
 }
+.img {
+    height: 100%;
+    object-fit: cover;
+}

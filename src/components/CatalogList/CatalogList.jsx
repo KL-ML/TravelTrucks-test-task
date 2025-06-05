@@ -1,21 +1,27 @@
 import css from './CatalogList.module.css';
 
-import Box from '../Box/Box';
 import CatalogItem from '../CatalogItem/CatalogItem';
 import Button from '../Button/Button';
-import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { selectCampers } from '../../redux/campersSlice';
 
 export default function CatalogList() {
+  const campers = useSelector(selectCampers);
   return (
-    <div className={css.catalogWrap}>
-      <Box tag="ul" variant="catalogList">
-        <CatalogItem />
-        <CatalogItem />
-        <CatalogItem />
-        <CatalogItem />
-      </Box>
-      
-        <Button type="button" text="Load more" variant="outlined" />
-    </div>
+    <>
+      {campers.length > 0 && (
+        <div className={css.catalogWrap}>
+          <ul className={css.catalogList}>
+            {campers.map(camper => (
+              <li key={camper.id}>
+                <CatalogItem camper={camper} />
+              </li>
+            ))}
+          </ul>
+
+          <Button type="button" text="Load more" variant="outlined" />
+        </div>
+      )}
+    </>
   );
 }

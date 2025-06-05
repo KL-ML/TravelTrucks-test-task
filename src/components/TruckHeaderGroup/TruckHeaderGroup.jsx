@@ -2,25 +2,34 @@ import clsx from 'clsx';
 import css from './TruckHeaderGroup.module.css';
 import Heading from '../Heading/Heading';
 
-export default function TruckHeaderGroup({ variant }) {
+export default function TruckHeaderGroup({
+  variant,
+  name,
+  price,
+  rating,
+  location,
+  reviews,
+}) {
   return (
     <>
       <div className={clsx(css.cardHeaderGroup, css[variant])}>
         <div>
           <Heading tag="h2" variant="cardH2">
-            Mavericks
+            {name}
           </Heading>
           <ul className={css.cardDetails}>
             <li>
-              <p>4.4(2 Reviews)</p>
+              <p>
+                {rating}({reviews} Reviews)
+              </p>
             </li>
             <li>
-              <p>Kyiv, Ukraine</p>
+              <p>{location}</p>
             </li>
           </ul>
         </div>
         <Heading tag="h3" variant="cardH2">
-          €8000.00
+          €{price},00
         </Heading>
       </div>
     </>

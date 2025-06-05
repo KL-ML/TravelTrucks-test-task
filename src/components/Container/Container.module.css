@@ -1,5 +1,12 @@
-.container {
-  width: var(--container-width);
-  /* padding: 0 var(--container-side); */
-  margin: 0 auto;
+@media (max-width: 1439px) {
+  .container {
+    width: 100vw;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1440px) {
+  .container {
+    width: var(--container-width);
+    margin: 0 auto;
+  }
 }

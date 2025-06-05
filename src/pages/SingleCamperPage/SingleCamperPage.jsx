@@ -11,6 +11,7 @@ const buildLinkClass = ({ isActive }) => {
 };
 
 export default function SingleCamperPage() {
+
   return (
     <>
       <Section variant="camper">
