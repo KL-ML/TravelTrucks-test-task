@@ -7,7 +7,7 @@ import CategoriesList from '../CategoriesList/CategoriesList';
 import { Link, useLocation } from 'react-router-dom';
 import TruckImg from '../TruckImg/TruckImg';
 
-export default function CatalogItem({camper}) {
+export default function CatalogItem({ camper }) {
   const locationState = useLocation();
   const {
     id,
@@ -59,7 +59,12 @@ export default function CatalogItem({camper}) {
             water,
           }}
         />
-        <Link to={`/catalog/${id}`} state={locationState}>
+        <Link
+          to={`/catalog/${id}/features`}
+          state={locationState}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Button type="button" text="Show more" variant="filled" />
         </Link>
       </div>

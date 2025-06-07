@@ -1,5 +1,7 @@
+import { nanoid } from 'nanoid';
 import Category from '../Category/Category';
 import css from './CategoriesList.module.css';
+import { textBeautyfy } from '../../helpers/textBeautyfy';
 
 export default function CategoriesList({ gray, categories }) {
   return (
@@ -8,9 +10,9 @@ export default function CategoriesList({ gray, categories }) {
         {Object.keys(categories).map(
           item =>
             categories[item] && (
-              <li key={item}>
+              <li key={nanoid()}>
                 <Category variant="oval" gray={gray}>
-                  {item}
+                  {textBeautyfy(item)}
                 </Category>
               </li>
             )

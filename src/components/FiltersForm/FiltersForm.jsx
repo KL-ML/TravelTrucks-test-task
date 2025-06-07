@@ -8,7 +8,7 @@ import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 
 const initialValues = {
-  location: '',
+  city: '',
   equipment: [],
   type: '',
 };
@@ -32,18 +32,21 @@ export default function FiltersForm() {
   const panelTruckFieldId = useId();
 
   const handleSubmit = (
-    { location, equipment, form },
+    { city, equipment, form },
     { setSubmitting, resetForm }
   ) => {
     setTimeout(() => {
       resetForm();
       setSubmitting(false);
     }, 500);
-    
+
+    const location = city === "" ? null : city;
+
     const equipmentObject = {};
     equipment.map(item => {
       equipmentObject[item] = true;
     });
+
     const filterParams = { location, ...equipmentObject, form };
     dispatch(changeFilter(filterParams));
   };
@@ -54,37 +57,37 @@ export default function FiltersForm() {
         {({ isSubmitting }) => (
           <Form>
             <div className={css.selectWrap}>
-              <label className={css.selectLable} htmlFor="location">
+              <label className={css.selectLable} htmlFor="city">
                 Location
               </label>
               <Field
                 className={css.select}
                 component="select"
                 id={locationFieldId}
-                name="location"
+                name="city"
               >
-                <option id="location" value="">
+                <option id="city" value="">
                   City
                 </option>
-                <option id="location" value="dnipro">
+                <option id="city" value="dnipro">
                   Dnipro, Ukraine
                 </option>
-                <option id="location" value="kharkiv">
+                <option id="city" value="kharkiv">
                   Kharkiv, Ukraine
                 </option>
-                <option id="location" value="kyiv">
+                <option id="city" value="kyiv">
                   Kyiv, Ukraine
                 </option>
-                <option id="location" value="lviv">
+                <option id="city" value="lviv">
                   Lviv, Ukraine
                 </option>
-                <option id="location" value="odesa">
+                <option id="city" value="odesa">
                   Odesa, Ukraine
                 </option>
-                <option id="location" value="poltava">
+                <option id="city" value="poltava">
                   Poltava, Ukraine
                 </option>
-                <option id="location" value="sumy">
+                <option id="city" value="sumy">
                   Sumy, Ukraine
                 </option>
               </Field>

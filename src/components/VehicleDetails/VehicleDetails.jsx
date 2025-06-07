@@ -1,8 +1,10 @@
 import css from './VehicleDetails.module.css';
 
-import Heading from "../Heading/Heading";
+import Heading from '../Heading/Heading';
+import { textBeautyfy } from '../../helpers/textBeautyfy';
+import { nanoid } from 'nanoid';
 
-export default function VehicleDetails() {
+export default function VehicleDetails({ details }) {
   return (
     <div>
       <div className={css.headingWrap}>
@@ -11,30 +13,15 @@ export default function VehicleDetails() {
         </Heading>
       </div>
       <ul>
-        <li className={css.detailItem}>
-          <p>Form</p>
-          <p>Panel truck</p>
-        </li>
-        <li className={css.detailItem}>
-          <p>Length</p>
-          <p>5.4 m</p>
-        </li>
-        <li className={css.detailItem}>
-          <p>Width</p>
-          <p>2.01 m</p>
-        </li>
-        <li className={css.detailItem}>
-          <p>Height</p>
-          <p>2.05 m</p>
-        </li>
-        <li className={css.detailItem}>
-          <p>Tank</p>
-          <p>132 I</p>
-        </li>
-        <li className={css.detailItem}>
-          <p>Consumption</p>
-          <p>12.4l/100km</p>
-        </li>
+        {Object.keys(details).map(
+          item =>
+            details[item] && (
+              <li key={nanoid()} className={css.detailItem}>
+                <p>{textBeautyfy(item)}</p>
+                <p>{textBeautyfy(details[item])}</p>
+              </li>
+            )
+        )}
       </ul>
     </div>
   );
