@@ -3,23 +3,54 @@ import css from './FiltersForm.module.css';
 import { Field, Form, Formik } from 'formik';
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
+import { useId } from 'react';
+import { useDispatch } from 'react-redux';
+import { changeFilter } from '../../redux/filtersSlice';
+
+const initialValues = {
+  location: '',
+  equipment: [],
+  type: '',
+};
+
 
 export default function FiltersForm() {
+  const dispatch = useDispatch();
+
+  const locationFieldId = useId();
+  const ACFieldId = useId();
+  const bathroomFieldId = useId();
+  const kitchenFieldId = useId();
+  const TVFieldId = useId();
+  const radioFieldId = useId();
+  const refrigeratorFieldId = useId();
+  const microwaveFieldId = useId();
+  const gasFieldId = useId();
+  const waterFieldId = useId();
+  const alcoveFieldId = useId();
+  const fullyIntegratedFieldId = useId();
+  const panelTruckFieldId = useId();
+
+  const handleSubmit = (
+    { location, equipment, form },
+    { setSubmitting, resetForm }
+  ) => {
+    setTimeout(() => {
+      resetForm();
+      setSubmitting(false);
+    }, 500);
+    
+    const equipmentObject = {};
+    equipment.map(item => {
+      equipmentObject[item] = true;
+    });
+    const filterParams = { location, ...equipmentObject, form };
+    dispatch(changeFilter(filterParams));
+  };
+
   return (
     <>
-      <Formik
-        initialValues={{
-          location: '',
-          equipment: [],
-          type: '',
-        }}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
-        }}
-      >
+      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         {({ isSubmitting }) => (
           <Form>
             <div className={css.selectWrap}>
@@ -29,7 +60,7 @@ export default function FiltersForm() {
               <Field
                 className={css.select}
                 component="select"
-                id="location"
+                id={locationFieldId}
                 name="location"
               >
                 <option id="location" value="">
@@ -58,7 +89,9 @@ export default function FiltersForm() {
                 </option>
               </Field>
             </div>
-            <Heading tag="h2" variant="filtersB2" textColor>Filters</Heading>
+            <Heading tag="h2" variant="filtersB2" textColor>
+              Filters
+            </Heading>
             <div className={css.checkboxGroup}>
               <Heading
                 tag="h3"
@@ -79,6 +112,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="AC"
+                    id={ACFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -93,6 +127,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="bathroom"
+                    id={bathroomFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -107,6 +142,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="kitchen"
+                    id={kitchenFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -121,6 +157,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="TV"
+                    id={TVFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -135,6 +172,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="radio"
+                    id={radioFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -149,6 +187,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="refrigerator"
+                    id={refrigeratorFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -163,6 +202,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="microwave"
+                    id={microwaveFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -177,6 +217,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="gas"
+                    id={gasFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -191,6 +232,7 @@ export default function FiltersForm() {
                     type="checkbox"
                     name="equipment"
                     value="water"
+                    id={waterFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -214,8 +256,9 @@ export default function FiltersForm() {
                   <Field
                     className={css.checkfield}
                     type="radio"
-                    name="type"
+                    name="form"
                     value="alcove"
+                    id={alcoveFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -228,8 +271,9 @@ export default function FiltersForm() {
                   <Field
                     className={css.checkfield}
                     type="radio"
-                    name="type"
+                    name="form"
                     value="fullyIntegrated"
+                    id={fullyIntegratedFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -242,8 +286,9 @@ export default function FiltersForm() {
                   <Field
                     className={css.checkfield}
                     type="radio"
-                    name="type"
+                    name="form"
                     value="panelTruck"
+                    id={panelTruckFieldId}
                   />
                   <span className={css.checkmark}>
                     {/* <svg>
@@ -254,7 +299,12 @@ export default function FiltersForm() {
                 </label>
               </div>
             </div>
-            <Button variant="filled" text="Submit" type="submit" disabled={isSubmitting} />
+            <Button
+              variant="filled"
+              text="Submit"
+              btnType="submit"
+              disabled={isSubmitting}
+            />
           </Form>
         )}
       </Formik>

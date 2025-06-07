@@ -5,6 +5,7 @@ import TruckImg from '../TruckImg/TruckImg';
 import css from './SingleCamper.module.css';
 import { selectCamper } from '../../redux/camperSlice.js';
 import { nanoid } from 'nanoid';
+import Loader from '../Loader/Loader.jsx';
 
 export default function SingleCamper() {
   const camper = useSelector(selectCamper);
@@ -13,7 +14,7 @@ export default function SingleCamper() {
   return (
     <>
       {camper.length === 0 ? (
-        <p>loading...</p>
+        <Loader />
       ) : (
         <div className={css.camperWrap}>
           <TruckHeaderGroup

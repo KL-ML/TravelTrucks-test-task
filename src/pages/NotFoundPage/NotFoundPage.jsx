@@ -9,9 +9,8 @@ export default function NotFoundPage() {
         <p className={css.textNotFound}>Ow No! The page is not found...</p>
         <img
           className={css.notFoundImg}
-          // src="./src/images/animation-337.gif"
-          src="https://i.ibb.co/dJfRPr3k/animation-337.gif"
-          width="400"
+          src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbG1zb2drbXQ5ejZ6MXUzZWtqcDZmaHV6Y3lvcm4xNjd4bXZhZXkxNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/XV7oYu6ZS5mQ1o1QQG/giphy.gif"
+          width="800"
           height="400"
         />
         <Link to="/" className={css.goBack}>
