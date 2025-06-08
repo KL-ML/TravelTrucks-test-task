@@ -11,5 +11,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font: var(--h2-font-style);
     background-color: var(--badges-color);
+    color: var(--button-color);
+}
+.ratingStarsWrap {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.yellow {
+    fill: var(--rating-color);
+}
+.gray {
+    fill: var(--badges-color);
 }

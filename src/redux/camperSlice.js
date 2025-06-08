@@ -1,8 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { fetchCamperById } from "./campersOps";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchCamperById } from './operations';
 
 const INITIAL_STATE = { item: [], isLoading: false, error: null };
-
 
 const camperSlice = createSlice({
   name: 'camper',

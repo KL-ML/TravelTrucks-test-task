@@ -1,0 +1,16 @@
+.favoritesBtn {
+    border: none;
+    outline: none;
+
+    background-color: inherit;
+}
+.favorBtnIcon {
+    fill: var(--main-color);
+    transition: fill var(--transition);
+}
+.favoritesBtn:hover .favorBtnIcon {
+    fill: var(--button-hover-color);
+}
+.isFavorite .favorBtnIcon {
+    fill: var(--button-color);
+}

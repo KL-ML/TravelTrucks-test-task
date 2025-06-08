@@ -10,3 +10,17 @@
     flex-direction: column;
     gap: 16px;
 }
+.priceWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+}
+.cardDetailsItem {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.starIcon {
+    fill: var(--rating-color);
+}

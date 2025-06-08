@@ -7,7 +7,7 @@ import { selectCamper } from '../../redux/camperSlice.js';
 import { nanoid } from 'nanoid';
 import Loader from '../Loader/Loader.jsx';
 
-export default function SingleCamper() {
+export default function SingleCamper({ iconsPass }) {
   const camper = useSelector(selectCamper);
   const { name, price, rating, location, reviews, gallery, description } =
     camper;
@@ -24,6 +24,8 @@ export default function SingleCamper() {
             location={location}
             reviews={reviews.length}
             variant="column"
+              iconsPass={iconsPass}
+              hidden
           />
           <ul className={css.imagesList}>
             {gallery.map(img => (

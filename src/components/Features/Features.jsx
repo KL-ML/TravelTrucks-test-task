@@ -3,9 +3,10 @@ import CategoriesList from '../CategoriesList/CategoriesList';
 import VehicleDetails from '../VehicleDetails/VehicleDetails';
 import css from './Features.module.css';
 import { selectCamper } from '../../redux/camperSlice';
+import iconsPath from '../../images/symbol-defs.svg';
 
 export default function Features() {
-  const curentCamper = useSelector(selectCamper);
+  const currentCamper = useSelector(selectCamper);
 
   const {
     form,
@@ -14,6 +15,8 @@ export default function Features() {
     height,
     tank,
     consumption,
+    transmission,
+    engine,
     AC,
     bathroom,
     kitchen,
@@ -23,30 +26,38 @@ export default function Features() {
     microwave,
     gas,
     water,
-  } = curentCamper;
+  } = currentCamper;
+
 
   return (
-    <div className={css.featuresWrap}>
-      <div className={css.categoriesWrap}>
-        <CategoriesList
-          gray
-          categories={{
-            AC,
-            bathroom,
-            kitchen,
-            TV,
-            radio,
-            refrigerator,
-            microwave,
-            gas,
-            water,
-          }}
-        />
-      </div>
+    <>
+      {currentCamper.form && (
+        <div className={css.featuresWrap}>
+          <div className={css.categoriesWrap}>
+            <CategoriesList
+              iconsPath={iconsPath}
+              gray
+              transmission={transmission}
+              engine={engine}
+              categories={{
+                AC,
+                bathroom,
+                kitchen,
+                TV,
+                radio,
+                refrigerator,
+                microwave,
+                gas,
+                water,
+              }}
+            />
+          </div>
 
-      <VehicleDetails
-        details={{ form, length, width, height, tank, consumption }}
-      />
-    </div>
+          <VehicleDetails
+            details={{ form, length, width, height, tank, consumption }}
+          />
+        </div>
+      )}
+    </>
   );
 }

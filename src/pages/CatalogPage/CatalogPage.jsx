@@ -6,7 +6,7 @@ import FiltersForm from '../../components/FiltersForm/FiltersForm';
 
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchCampers } from '../../redux/campersOps';
+import { fetchCampers } from '../../redux/operations';
 import { selectFilter } from '../../redux/filtersSlice';
 
 export default function CatalogPage() {

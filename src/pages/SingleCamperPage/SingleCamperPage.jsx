@@ -5,10 +5,11 @@ import { NavLink, Outlet, useParams } from 'react-router-dom';
 import Section from '../../components/Section/Section';
 import SingleCamper from '../../components/SingleCamper/SingleCamper';
 import BookingForm from '../../components/BookingForm/BookingForm';
-import { useDispatch} from 'react-redux';
-import { useEffect } from 'react';
-import { fetchCamperById } from '../../redux/campersOps';
-
+import { useDispatch } from 'react-redux';
+import { Suspense, useEffect } from 'react';
+import { fetchCamperById } from '../../redux/operations';
+import Loader from '../../components/Loader/Loader';
+import iconsPass from '../../images/symbol-defs.svg';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
@@ -25,7 +26,7 @@ export default function SingleCamperPage() {
   return (
     <>
       <Section variant="camper">
-        <SingleCamper />
+        <SingleCamper iconsPass={iconsPass} />
         <div>
           <ul className={css.camperDetailsNav}>
             <li>
@@ -41,8 +42,9 @@ export default function SingleCamperPage() {
           </ul>
           <div className={css.detailsWrap}>
             <div>
-              {/* <Features categories={categories} /> */}
-              <Outlet />
+              <Suspense fallback={<Loader />}>
+                <Outlet />
+              </Suspense>
             </div>
             <BookingForm />
           </div>

@@ -6,13 +6,13 @@ import Button from '../Button/Button';
 import { useId } from 'react';
 import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
+import iconsPath from '../../images/symbol-defs.svg';
 
 const initialValues = {
   city: '',
   equipment: [],
   type: '',
 };
-
 
 export default function FiltersForm() {
   const dispatch = useDispatch();
@@ -40,7 +40,7 @@ export default function FiltersForm() {
       setSubmitting(false);
     }, 500);
 
-    const location = city === "" ? null : city;
+    const location = city === '' ? null : city;
 
     const equipmentObject = {};
     equipment.map(item => {
@@ -60,37 +60,42 @@ export default function FiltersForm() {
               <label className={css.selectLable} htmlFor="city">
                 Location
               </label>
-              <Field
-                className={css.select}
-                component="select"
-                id={locationFieldId}
-                name="city"
-              >
-                <option id="city" value="">
-                  City
-                </option>
-                <option id="city" value="dnipro">
-                  Dnipro, Ukraine
-                </option>
-                <option id="city" value="kharkiv">
-                  Kharkiv, Ukraine
-                </option>
-                <option id="city" value="kyiv">
-                  Kyiv, Ukraine
-                </option>
-                <option id="city" value="lviv">
-                  Lviv, Ukraine
-                </option>
-                <option id="city" value="odesa">
-                  Odesa, Ukraine
-                </option>
-                <option id="city" value="poltava">
-                  Poltava, Ukraine
-                </option>
-                <option id="city" value="sumy">
-                  Sumy, Ukraine
-                </option>
-              </Field>
+              <div className={css.selectIconWrap}>
+                <svg className={css.selectIcon} width="20" height="20">
+                  <use href={`${iconsPath}#location`}></use>
+                </svg>
+                <Field
+                  className={css.select}
+                  component="select"
+                  id={locationFieldId}
+                  name="city"
+                >
+                  <option id="city" value="">
+                    City
+                  </option>
+                  <option id="city" value="dnipro">
+                    Dnipro, Ukraine
+                  </option>
+                  <option id="city" value="kharkiv">
+                    Kharkiv, Ukraine
+                  </option>
+                  <option id="city" value="kyiv">
+                    Kyiv, Ukraine
+                  </option>
+                  <option id="city" value="lviv">
+                    Lviv, Ukraine
+                  </option>
+                  <option id="city" value="odesa">
+                    Odesa, Ukraine
+                  </option>
+                  <option id="city" value="poltava">
+                    Poltava, Ukraine
+                  </option>
+                  <option id="city" value="sumy">
+                    Sumy, Ukraine
+                  </option>
+                </Field>
+              </div>
             </div>
             <Heading tag="h2" variant="filtersB2" textColor>
               Filters
@@ -118,9 +123,9 @@ export default function FiltersForm() {
                     id={ACFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#ac`}></use>
+                    </svg>
                     AC
                   </span>
                 </label>
@@ -133,9 +138,9 @@ export default function FiltersForm() {
                     id={bathroomFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#bathroom`}></use>
+                    </svg>
                     Bathroom
                   </span>
                 </label>
@@ -148,9 +153,9 @@ export default function FiltersForm() {
                     id={kitchenFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#kitchen`}></use>
+                    </svg>
                     Kitchen
                   </span>
                 </label>
@@ -163,9 +168,9 @@ export default function FiltersForm() {
                     id={TVFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#tv`}></use>
+                    </svg>
                     TV
                   </span>
                 </label>
@@ -178,9 +183,9 @@ export default function FiltersForm() {
                     id={radioFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#radio`}></use>
+                    </svg>
                     Radio
                   </span>
                 </label>
@@ -193,9 +198,9 @@ export default function FiltersForm() {
                     id={refrigeratorFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#refrigerator`}></use>
+                    </svg>
                     Refrigerator
                   </span>
                 </label>
@@ -208,9 +213,9 @@ export default function FiltersForm() {
                     id={microwaveFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#microwave`}></use>
+                    </svg>
                     Microwave
                   </span>
                 </label>
@@ -223,9 +228,9 @@ export default function FiltersForm() {
                     id={gasFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#gas`}></use>
+                    </svg>
                     Gas
                   </span>
                 </label>
@@ -238,9 +243,9 @@ export default function FiltersForm() {
                     id={waterFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#water`}></use>
+                    </svg>
                     Water
                   </span>
                 </label>
@@ -260,14 +265,14 @@ export default function FiltersForm() {
                     className={css.checkfield}
                     type="radio"
                     name="form"
-                    value="alcove"
-                    id={alcoveFieldId}
+                    value="panelTruck"
+                    id={panelTruckFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
-                    Alcove
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#van`}></use>
+                    </svg>
+                    Van
                   </span>
                 </label>
                 <label className={css.checkboxLable}>
@@ -279,9 +284,9 @@ export default function FiltersForm() {
                     id={fullyIntegratedFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#fullyintegrated`}></use>
+                    </svg>
                     Fully Integrated
                   </span>
                 </label>
@@ -290,14 +295,14 @@ export default function FiltersForm() {
                     className={css.checkfield}
                     type="radio"
                     name="form"
-                    value="panelTruck"
-                    id={panelTruckFieldId}
+                    value="alcove"
+                    id={alcoveFieldId}
                   />
                   <span className={css.checkmark}>
-                    {/* <svg>
-                      <use />
-                    </svg> */}
-                    Van
+                    <svg className={css.categoryIcon} width="32" height="32">
+                      <use href={`${iconsPath}#alcove`}></use>
+                    </svg>
+                    Alcove
                   </span>
                 </label>
               </div>

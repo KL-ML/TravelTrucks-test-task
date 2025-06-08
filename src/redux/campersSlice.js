@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { fetchCampers } from './campersOps';
+import { fetchCampers } from './operations';
 
 const INITIAL_STATE = { items: [], isLoading: false, error: null };
 
@@ -23,8 +23,6 @@ const campersSlice = createSlice({
       });
   },
 });
-
-
 
 export const campersSliceReducer = campersSlice.reducer;
 export const selectCampers = state => state.campers.items;

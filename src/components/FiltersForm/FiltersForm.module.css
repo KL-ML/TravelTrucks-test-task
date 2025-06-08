@@ -17,6 +17,22 @@ select,
   width: fit-content;
   color: var(--gray-color);
 }
+.selectIconWrap {
+  position: relative;
+}
+
+.selectIcon {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  fill: var(--gray-color);
+  background-color: var(--inputs-color);
+  transition: fill var(--transition);
+}
+.selectIconWrap:hover .selectIcon, 
+ .selectIconWrap:focus .selectIcon {
+  fill: var(--main-color);
+}
 .select {
   display: flex;
   align-items: center;
@@ -24,15 +40,16 @@ select,
   border-radius: 12px;
   background-color: var(--inputs-color);
   color: var(--gray-color);
-  padding: 14px 18px;
+  padding: 14px 48px;
   transition: color var(--transition);
   height: 56px;
+  width: 100%;
 }
 
-select:hover,
-select:focus {
+select:hover {
   color: var(--main-color);
 }
+
 select::picker-icon {
   display: none;
 }
@@ -60,8 +77,7 @@ option:last-of-type {
 option:not(option:last-of-type) {
   border-bottom: none;
 }
-option:hover,
-option:focus {
+option:hover {
   color: var(--main-color);
 }
 option:checked {
@@ -117,6 +133,7 @@ option::checkmark {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   text-align: center;
   overflow: hidden;
   top: 0;
