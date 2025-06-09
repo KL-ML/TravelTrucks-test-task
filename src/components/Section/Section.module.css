@@ -11,9 +11,10 @@
   justify-content: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
     url('../../images/Hero/hero-bg-desk@x1.jpg');
+    background-size: cover;
   margin-top: 0;
 }
-@media only screen and (min-resolution: 192dpi) {
+@media only screen and (min-resolution: 192dpi){
   .hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
       url('../../images/Hero/hero-bg-desk@x2.jpg');
