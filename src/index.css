@@ -1,5 +1,6 @@
 @import './styles/variables.css';
-@import './styles//reset.css';
+@import './styles/reset.css';
+@import './styles/react-datepicker.css';
 
 html {
   scroll-behavior: smooth;
@@ -16,3 +17,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* .react-datepicker__header {
+  width: 276px;
+  height: 74px;
+  background-color: var(--white-color);
+} */

@@ -5,7 +5,6 @@
   padding: 44px 57px;
   border: 1px solid var(--gray-light-color);
   border-radius: 10px;
-  
 }
 .bookingForm {
   display: flex;
@@ -15,5 +14,35 @@
   color: var(--gray-color);
 }
 .btnWrap {
-    margin: 0 auto;
+  margin: 0 auto;
 }
+.inputWrap {
+  border-radius: 12px;
+  background-color: var(--inputs-color);
+  width: 100%;
+  overflow: hidden;
+}
+.dateTextInput {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  width: 100%;
+  font: var(--body-font-style);
+  color: var(--gray-color);
+  padding: 18px;
+}
+.calendar {
+  width: 276px;
+  height: auto;
+  font: var(--body-font-style);
+  color: var(--text-color);
+  fill: var(--text-color);
+  border-color: var(--text-color);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--white-color);
+}
+
