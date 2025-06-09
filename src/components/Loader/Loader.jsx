@@ -1,9 +1,12 @@
-// import css from './Loader.module.css';
+import clsx from 'clsx';
+import css from './Loader.module.css';
 
-export default function Loader() {
+import { MoonLoader } from 'react-spinners';
+
+export default function Loader({variant}) {
   return (
-    <>
-      <p>Loader...</p>
-    </>
+    <div className={clsx(css.loaderWrap, css[variant])}>
+      <MoonLoader size={60} color="#e44848" speedMultiplier={1} />
+    </div>
   );
 }

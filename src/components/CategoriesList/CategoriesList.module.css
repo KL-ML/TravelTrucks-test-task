@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   gap: 8px;
 }
+.catalog {
+  height: 104px;
+  overflow-y: scroll;
+}
 .categoryIcon {
   margin-right: 8px;
 }

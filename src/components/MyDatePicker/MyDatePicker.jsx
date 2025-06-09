@@ -18,7 +18,6 @@ export default function MyDatePicker({ name = '' }) {
         {...field}
         selected={value}
         onChange={date => setValue(date)}
-        calendarClassName={css.calendar}
         className={css.dateTextInput}
       />
     </div>

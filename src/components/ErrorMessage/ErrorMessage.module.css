@@ -1,0 +1,5 @@
+.wrap {
+    font: var(--body-font-style);
+    text-align: center;
+    color: var(--gray-color);
+}

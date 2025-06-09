@@ -2,6 +2,7 @@
   box-sizing: border-box;
 }
 .inputWrap {
+  position: relative;
   width: 100%;
 }
 .textInput {
@@ -17,11 +18,16 @@
   color: var(--gray-color);
   padding: 18px;
 }
-
 .textInput:focus {
   color: var(--main-color);
 }
-
+.error {
+  position: absolute;
+  top: 36px;
+  right: 12px;
+  font-size: 12px;
+  color: var(--button-color);
+}
 .textarea {
   resize: none;
   height: 118px;

@@ -60,6 +60,7 @@ export default function CatalogItem({ camper }) {
           <Description>{description.slice(0, 56)}...</Description>
         )}
         <CategoriesList
+          variant="catalog"
           iconsPath={iconsPath}
           transmission={transmission}
           engine={engine}

@@ -14,19 +14,7 @@
   color: var(--gray-color);
 }
 .btnWrap {
-  margin: 0 auto;
-}
-
-.calendar {
-  width: 276px;
-  height: auto;
-  font: var(--body-font-style);
-  color: var(--text-color);
-  fill: var(--text-color);
-  border-color: var(--text-color);
-  border-radius: 12px;
-  overflow: hidden;
-  background-color: var(--white-color);
+  margin: 24px auto 0;
 }
 .bookingToast {
   font-size: 20px;

@@ -3,16 +3,18 @@ import Category from '../Category/Category';
 import css from './CategoriesList.module.css';
 import { textBeautyfy } from '../../helpers/textBeautyfy';
 import iconsPath from '../../images/symbol-defs.svg';
+import clsx from 'clsx';
 
 export default function CategoriesList({
   gray,
   categories,
   transmission,
   engine,
+  variant,
 }) {
   return (
     <>
-      <ul className={css.categoriesList}>
+      <ul className={clsx(css.categoriesList, css[variant])}>
         <li key={nanoid()}>
           <Category variant="oval" gray={gray}>
             <svg className={css.categoryIcon} width="20" height="20">

@@ -58,7 +58,7 @@ export default function BookingForm() {
           <div className={css.btnWrap}>
             <Button
               handleSubmit={handleSubmit}
-              form="bookingForm"
+              // form="bookingForm"
               btnType="submit"
               variant="filled"
               text="Send"

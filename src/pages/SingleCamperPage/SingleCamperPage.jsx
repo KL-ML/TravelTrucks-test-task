@@ -5,11 +5,13 @@ import { NavLink, Outlet, useParams } from 'react-router-dom';
 import Section from '../../components/Section/Section';
 import SingleCamper from '../../components/SingleCamper/SingleCamper';
 import BookingForm from '../../components/BookingForm/BookingForm';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Suspense, useEffect } from 'react';
 import { fetchCamperById } from '../../redux/operations';
 import Loader from '../../components/Loader/Loader';
 import iconsPass from '../../images/symbol-defs.svg';
+import { selectError, selectIsLoading } from '../../redux/camperSlice';
+import ErrorMessage from '../../components/ErrorMessage/ErrorMessage';
 
 const buildLinkClass = ({ isActive }) => {
   return clsx(css.link, isActive && css.active);
@@ -18,6 +20,9 @@ const buildLinkClass = ({ isActive }) => {
 export default function SingleCamperPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
+  // const filterParams = useSelector(selectFilter);
+  const isLoading = useSelector(selectIsLoading);
+  const isError = useSelector(selectError);
 
   useEffect(() => {
     dispatch(fetchCamperById(id));
@@ -26,6 +31,8 @@ export default function SingleCamperPage() {
   return (
     <>
       <Section variant="camper">
+        {isLoading && <Loader variant={'catalog'} />}
+        {isError && <ErrorMessage text="Error!"></ErrorMessage>}
         <SingleCamper iconsPass={iconsPass} />
         <div>
           <ul className={css.camperDetailsNav}>

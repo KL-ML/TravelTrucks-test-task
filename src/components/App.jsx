@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Loader from './Loader/Loader';
 
 const MainLayout = lazy(() => import('../layouts/MainLayout/MainLayout'));
 const HomePage = lazy(() => import('../pages/HomePage/HomePage'));
@@ -10,7 +11,7 @@ const SingleCamperPage = lazy(() =>
 const NotFoundPage = lazy(() => import('../pages/NotFoundPage/NotFoundPage'));
 const Features = lazy(() => import('./Features/Features'));
 const Reviews = lazy(() => import('./Reviews/Reviews'));
-const Loader = lazy(() => import('./Loader/Loader'));
+// const Loader = lazy(() => import('./Loader/Loader'));
 
 const App = () => {
   return (
