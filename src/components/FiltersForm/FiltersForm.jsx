@@ -1,6 +1,7 @@
 import css from './FiltersForm.module.css';
 
 import { Field, Form, Formik } from 'formik';
+import * as Yup from 'yup';
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';
 import { useId } from 'react';
@@ -51,9 +52,19 @@ export default function FiltersForm() {
     dispatch(changeFilter(filterParams));
   };
 
+  const filtersSchema = Yup.object().shape({
+    city: Yup.string(),
+    form: Yup.string().oneOf(['panelTruck', 'alcove', 'fullyIntegrated']),
+    equipment: Yup.array(),
+  });
+
   return (
     <>
-      <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={handleSubmit}
+        validationSchema={filtersSchema}
+      >
         {({ isSubmitting }) => (
           <Form>
             <div className={css.selectWrap}>
