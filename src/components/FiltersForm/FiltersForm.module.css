@@ -115,20 +115,27 @@ option::checkmark {
 
 /* checkbox customize */
 .checkboxGroup {
-  height: 374px;
   margin-top: 24px;
   margin-bottom: 24px;
+  height: 596px;
 }
-@media only screen and (min-width: 520px) {
+@media only screen and (max-width: 519px) {
   .checkboxGroup {
   height: 374px;
   }
 }
-@media only screen and (min-width: 638px) {
+
+@media only screen and (min-width: 520px) and (max-width: 637px) {
+  .checkboxGroup {
+  height: 374px;
+  }
+}
+@media only screen and (min-width: 638px) and (max-width: 1023px){
   .checkboxGroup {
   height: 274px;
   }
 }
+
 @media only screen and (min-width: 1282px) {
   .checkboxGroup {
     height: 376px;
@@ -153,6 +160,21 @@ option::checkmark {
 @media only screen and (min-width: 638px) {
   .checkboxWrap {
   width: 80vw;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .checkboxWrap {
+  width: 80vw;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .checkboxWrap {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 1236px) {
+  .checkboxWrap {
+    width: 150px;
   }
 }
 @media only screen and (min-width: 1282px) {
@@ -210,6 +232,11 @@ option::checkmark {
 .radioGroup {
   height: 168px;
   margin-bottom: 24px;
+}
+@media only screen and (min-width: 1024px) and (max-width: 1236px) {
+  .radioGroup {
+    height: 286px;
+  }
 }
 @media only screen and (min-width: 1282px) {
   .radioGroup {

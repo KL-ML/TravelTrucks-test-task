@@ -22,7 +22,7 @@
 .cardH2 {
   font: var(--h2-font-style-mobile);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1068px) {
   .cardH2 {
     font: var(--h2-font-style);
   }

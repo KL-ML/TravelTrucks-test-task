@@ -44,15 +44,20 @@
 }
 @media only screen and (min-width: 768px) {
   .catalog {
+    grid-template-columns: 1fr;
   gap: 36px;
   }
 }
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
   .catalog {
-    grid-template-columns: 260px 1fr;
-  gap: 36px;
-  } */
-/* } */
+    grid-template-columns: 234px 1fr;
+  }
+}
+@media only screen and (min-width: 1236px) {
+  .catalog {
+    grid-template-columns: 234px 1fr;
+  }
+}
 @media only screen and (min-width: 1282px) {
   .catalog {
     grid-template-columns: 360px 1fr;
