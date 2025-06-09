@@ -9,14 +9,14 @@ import { useDispatch } from 'react-redux';
 import { changeFilter } from '../../redux/filtersSlice';
 import iconsPath from '../../images/symbol-defs.svg';
 
-const initialValues = {
-  city: '',
-  equipment: [],
-  type: '',
-};
-
 export default function FiltersForm() {
   const dispatch = useDispatch();
+
+  const initialValues = {
+    city: '',
+    equipment: [],
+    type: '',
+  };
 
   const locationFieldId = useId();
   const ACFieldId = useId();

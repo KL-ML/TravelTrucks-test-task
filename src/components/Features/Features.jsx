@@ -28,7 +28,6 @@ export default function Features() {
     water,
   } = currentCamper;
 
-
   return (
     <>
       {currentCamper.form && (

@@ -1,28 +1,28 @@
 .reviewHeaderWrap {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 .avatar {
-    height: 60px;
-    width: 60px;
-    border-radius: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font: var(--h2-font-style);
-    background-color: var(--badges-color);
-    color: var(--button-color);
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font: var(--h2-font-style);
+  background-color: var(--badges-color);
+  color: var(--button-color);
 }
 .ratingStarsWrap {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .yellow {
-    fill: var(--rating-color);
+  fill: var(--rating-color);
 }
 .gray {
-    fill: var(--badges-color);
+  fill: var(--badges-color);
 }

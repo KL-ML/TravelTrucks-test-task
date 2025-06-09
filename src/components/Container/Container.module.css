@@ -6,7 +6,7 @@
 }
 @media (min-width: 1440px) {
   .container {
-    width: var(--container-width);
+    width: 1440px;
     margin: 0 auto;
   }
 }

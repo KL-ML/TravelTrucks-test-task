@@ -1,11 +1,10 @@
 .navList {
   display: flex;
   gap: 32px;
-  /* align-items: center; */
   font: var(--body2-font-style);
 }
 .link {
-    display: block;
+  display: block;
   padding: 24px 0;
 }
 .active {

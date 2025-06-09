@@ -2,7 +2,7 @@ import css from './MyDatePicker.module.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
-import { useField } from "formik";
+import { useField } from 'formik';
 
 export default function MyDatePicker({ name = '' }) {
   const [field, meta, helpers] = useField(name);
@@ -23,4 +23,4 @@ export default function MyDatePicker({ name = '' }) {
       />
     </div>
   );
-};
+}

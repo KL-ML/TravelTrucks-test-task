@@ -24,8 +24,8 @@ export default function SingleCamper({ iconsPass }) {
             location={location}
             reviews={reviews.length}
             variant="column"
-              iconsPass={iconsPass}
-              hidden
+            iconsPass={iconsPass}
+            hidden
           />
           <ul className={css.imagesList}>
             {gallery.map(img => (

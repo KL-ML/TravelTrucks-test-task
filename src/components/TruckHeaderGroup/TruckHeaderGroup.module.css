@@ -1,26 +1,26 @@
 .cardHeaderGroup {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 .cardDetails {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 .column {
-    flex-direction: column;
-    gap: 16px;
+  flex-direction: column;
+  gap: 16px;
 }
 .priceWrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 .cardDetailsItem {
-    display: flex;
-    align-items: center;
-    gap: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 .starIcon {
-    fill: var(--rating-color);
+  fill: var(--rating-color);
 }

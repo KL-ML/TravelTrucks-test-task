@@ -1,5 +1,3 @@
-// import css from './Catalog.module.css';
-
 import CatalogList from '../../components/CatalogList/CatalogList';
 import Section from '../../components/Section/Section';
 import FiltersForm from '../../components/FiltersForm/FiltersForm';

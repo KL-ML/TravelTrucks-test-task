@@ -4,7 +4,12 @@ import css from './CategoriesList.module.css';
 import { textBeautyfy } from '../../helpers/textBeautyfy';
 import iconsPath from '../../images/symbol-defs.svg';
 
-export default function CategoriesList({ gray, categories, transmission, engine }) {
+export default function CategoriesList({
+  gray,
+  categories,
+  transmission,
+  engine,
+}) {
   return (
     <>
       <ul className={css.categoriesList}>

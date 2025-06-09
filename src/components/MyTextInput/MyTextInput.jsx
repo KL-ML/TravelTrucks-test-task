@@ -2,7 +2,6 @@ import { useField } from 'formik';
 import css from './MyTextInput.module.css';
 import clsx from 'clsx';
 
-
 export default function MyTextInput({
   // eslint-disable-next-line no-unused-vars
   tag: Tag = 'input',

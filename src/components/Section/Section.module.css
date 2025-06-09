@@ -1,11 +1,11 @@
 .section {
-  padding-left: var(--section-side);
-  padding-right: var(--section-side);
-  margin-top: var(--section-top);
+  padding-left: 64px;
+  padding-right: 64px;
+  margin-top: 48px;
 }
 .hero {
-  max-width: var(--container-width);
-  height: var(--hero-height);
+  max-width: 1440px;
+  height: 696px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -21,8 +21,8 @@
 }
 .catalog {
   display: grid;
-  grid-template-columns: var(--filters-widget-wd) 1fr;
-  gap: var(--section-side);
+  grid-template-columns: 360px 1fr;
+  gap: 64px;
   margin-bottom: 52px;
 }
 .camper {

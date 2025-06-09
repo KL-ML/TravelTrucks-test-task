@@ -4,7 +4,7 @@
   justify-content: center;
   flex-direction: column;
   margin-top: auto;
-  color: var(--light-secondary-color);
+  color: var(--white-color);
 }
 .notFoundImg {
   object-fit: cover;
@@ -24,6 +24,6 @@
   margin-bottom: 24px;
 }
 .goBack:hover {
-  color: var(--light-color);
+  color: var(--button-color);
   text-decoration: underline;
 }

@@ -1,15 +1,14 @@
 .catalogCard {
-    display: grid;
-    grid-template-columns: var(--image-width) 1fr;
-    grid-template-rows: 1fr;
-    gap: 24px;
-    padding: 24px;
-    border: 1px solid var(--gray-light-color);
-    border-radius: 20px;
-
+  display: grid;
+  grid-template-columns: 292px 1fr;
+  grid-template-rows: 1fr;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--gray-light-color);
+  border-radius: 20px;
 }
 .cardDesriptionWrap {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }

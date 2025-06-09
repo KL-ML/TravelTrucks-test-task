@@ -51,7 +51,7 @@ export default function CatalogList() {
 
           {totalPages > page && (
             <Button
-              type="button"
+              btnType="button"
               text="Load more"
               variant="outlined"
               handleClick={showMoreFunc}

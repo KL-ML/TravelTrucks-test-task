@@ -1,11 +1,11 @@
 .imgWrap {
-    width: var(--image-width);
-    height: 100%;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: var(--gray-light-color);
+  width: 292px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: var(--gray-light-color);
 }
 .img {
-    height: 100%;
-    object-fit: cover;
+  height: 100%;
+  object-fit: cover;
 }

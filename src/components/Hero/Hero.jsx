@@ -1,6 +1,5 @@
 // import css from './Hero.module.css';
 
-
 import Section from '../Section/Section';
 import Heading from '../Heading/Heading';
 import Button from '../Button/Button';

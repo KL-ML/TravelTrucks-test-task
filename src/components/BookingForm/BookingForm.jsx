@@ -1,4 +1,4 @@
-import { Form, Formik} from 'formik';
+import { Form, Formik } from 'formik';
 import * as Yup from 'yup';
 import css from './BookingForm.module.css';
 import Heading from '../Heading/Heading';
@@ -7,8 +7,6 @@ import Description from '../Description/Description';
 import Button from '../Button/Button';
 import MyDatePicker from '../MyDatePicker/MyDatePicker';
 import toast, { Toaster } from 'react-hot-toast';
-
-
 
 export default function BookingForm() {
   function handleSubmit(values, actions) {

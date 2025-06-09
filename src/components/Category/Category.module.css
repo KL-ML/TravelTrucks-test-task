@@ -1,13 +1,13 @@
 .oval {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 48px;
-    width: fit-content;
-    background-color: var(--badges-color);
-    border-radius: 50px;
-    padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: fit-content;
+  background-color: var(--badges-color);
+  border-radius: 50px;
+  padding: 0 18px;
 }
 .gray {
-    background-color: var(--gray-color-light);
+  background-color: var(--gray-color-light);
 }
