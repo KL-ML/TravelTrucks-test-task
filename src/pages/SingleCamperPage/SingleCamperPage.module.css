@@ -24,7 +24,7 @@
   gap: 40px;
   margin-top: 44px;
 }
-@media only screen and (min-width: 1082px) {
+@media only screen and (min-width: 768px) {
   .detailsWrap {
     grid-template-columns: 1fr 1fr;
   }

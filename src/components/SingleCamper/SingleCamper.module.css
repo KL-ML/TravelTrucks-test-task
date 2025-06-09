@@ -6,15 +6,14 @@
 .imagesList {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  /* height: 312px; */
-  /* overflow-x: scroll; */
+  gap: 24px;
   padding-bottom: 12px;
   margin-bottom: -12px;
 }
 @media only screen and (min-width: 768px) {
   .imagesList {
     flex-direction: row;
+    gap: 48px;
     height: 312px;
     overflow-x: scroll;
   }
