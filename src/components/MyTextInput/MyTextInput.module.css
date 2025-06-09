@@ -20,6 +20,10 @@
   padding: 18px;
 }
 
+.textInput:focus {
+  color: var(--main-color);
+}
+
 .textarea {
   resize: none;
   height: 118px;

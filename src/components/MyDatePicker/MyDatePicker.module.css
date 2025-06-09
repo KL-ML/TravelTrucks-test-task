@@ -1,0 +1,18 @@
+.inputWrap {
+  border-radius: 12px;
+  background-color: var(--inputs-color);
+  width: 100%;
+  overflow: hidden;
+}
+.dateTextInput {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  width: 100%;
+  font: var(--body-font-style);
+  color: var(--gray-color);
+  padding: 18px;
+}
