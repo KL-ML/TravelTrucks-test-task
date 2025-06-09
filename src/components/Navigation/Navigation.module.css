@@ -1,7 +1,14 @@
 .navList {
   display: flex;
-  gap: 32px;
-  font: var(--body2-font-style);
+  gap: 16px;
+  font: var(--body2-font-style-mobile);
+  margin-right: 16px;
+}
+@media only screen and (min-width: 768px) {
+  .navList {
+    gap: 32px;
+    margin-right: 0;
+  }
 }
 .link {
   display: block;

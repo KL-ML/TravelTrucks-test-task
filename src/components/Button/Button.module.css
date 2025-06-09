@@ -2,13 +2,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 56px;
-  min-width: 166px;
+  height: 50px;
+  min-width: 160px;
   width: fit-content;
-  padding: 16px 48px;
-  font: var(--body2-font-style);
+  padding: 12px 40px;
+  font: var(--body2-font-style-mobile);
   border-radius: 50px;
   gap: 8px;
+}
+@media only screen and (min-width: 768px) {
+  .button {
+    height: 56px;
+    min-width: 166px;
+    width: fit-content;
+    padding: 16px 48px;
+    font: var(--body2-font-style);
+  }
 }
 .button:hover,
 .button:focus {
@@ -24,6 +33,7 @@
 .filled:hover {
   background-color: var(--button-hover-color);
 }
+
 .outlined {
   background-color: transparent;
   color: var(--main-color);

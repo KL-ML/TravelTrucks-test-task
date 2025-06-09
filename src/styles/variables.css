@@ -16,10 +16,13 @@
   --family: Inter, sans-serif;
 
   /* font: font-weight font-size/line-height */
+  --h1-font-style-mobile: 600 44px/1 var(--family);
   --h1-font-style: 600 48px/0.67 var(--family);
+  --h2-font-style-mobile: 600 20px/1.2 var(--family);
   --h2-font-style: 600 24px/1.33 var(--family);
   --h3-font-style: 600 20px/1.2 var(--family);
   --body-font-style: 400 16px/1.5 var(--family);
+  --body2-font-style-mobile: 500 14px/1.5 var(--family);
   --body2-font-style: 500 16px/1.5 var(--family);
 
   /* transition */

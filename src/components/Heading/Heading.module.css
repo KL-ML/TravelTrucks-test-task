@@ -1,12 +1,23 @@
 .heroH1 {
-  font: var(--h1-font-style);
+  font: var(--h1-font-style-mobile);
   color: var(--inputs-color);
   margin-bottom: 16px;
 }
+@media only screen and (min-width: 768px) {
+  .heroH1 {
+    font: var(--h1-font-style);
+  }
+}
 .heroH2 {
-  font: var(--h2-font-style);
+  font: var(--h2-font-style-mobile);
+  
   color: var(--inputs-color);
   margin-bottom: 40px;
+}
+@media only screen and (min-width: 768px) {
+  .heroH2 {
+    font: var(--h2-font-style);
+  }
 }
 .cardH2 {
   font: var(--h2-font-style);

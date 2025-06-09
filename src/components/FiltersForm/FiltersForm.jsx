@@ -67,6 +67,7 @@ export default function FiltersForm() {
       >
         {({ isSubmitting }) => (
           <Form>
+            {/* Location select */}
             <div className={css.selectWrap}>
               <label className={css.selectLable} htmlFor="city">
                 Location
@@ -108,9 +109,12 @@ export default function FiltersForm() {
                 </Field>
               </div>
             </div>
+
             <Heading tag="h2" variant="filtersB2" textColor>
               Filters
             </Heading>
+
+            {/* Vehicle equipment checkbox */}
             <div className={css.checkboxGroup}>
               <Heading
                 tag="h3"
@@ -262,6 +266,8 @@ export default function FiltersForm() {
                 </label>
               </div>
             </div>
+
+            {/* Vehicle type radio */}
             <div className={css.radioGroup}>
               <Heading tag="h3" variant="headerH3" underlined id="radio-group">
                 Vehicle type
@@ -318,6 +324,7 @@ export default function FiltersForm() {
                 </label>
               </div>
             </div>
+
             <Button
               variant="filled"
               text="Submit"
