@@ -5,9 +5,17 @@
 }
 .imagesList {
   display: flex;
+  flex-direction: column;
   gap: 48px;
-  height: 312px;
-  overflow-x: scroll;
+  /* height: 312px; */
+  /* overflow-x: scroll; */
   padding-bottom: 12px;
   margin-bottom: -12px;
+}
+@media only screen and (min-width: 768px) {
+  .imagesList {
+    flex-direction: row;
+    height: 312px;
+    overflow-x: scroll;
+  }
 }

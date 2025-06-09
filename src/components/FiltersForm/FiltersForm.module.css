@@ -1,7 +1,16 @@
 * {
   box-sizing: border-box;
 }
-
+.formWrap {
+  /* display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 24px; */
+}
+.filtersWrap {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px; */
+}
 /* select customize */
 select,
 ::picker(select) {
@@ -11,7 +20,17 @@ select,
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 768px) {
+  .selectWrap {
+    gap: 36px;
+  }
+}
+@media only screen and (min-width: 1282px) {
+  .selectWrap {
+    margin-bottom: 40px;
+  }
 }
 .selectLable {
   width: fit-content;
@@ -44,6 +63,7 @@ select,
   height: 56px;
   width: 100%;
 }
+
 select:hover {
   color: var(--main-color);
 }
@@ -95,16 +115,50 @@ option::checkmark {
 
 /* checkbox customize */
 .checkboxGroup {
-  height: 376px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  height: 374px;
+  margin-top: 24px;
+  margin-bottom: 24px;
 }
+@media only screen and (min-width: 520px) {
+  .checkboxGroup {
+  height: 374px;
+  }
+}
+@media only screen and (min-width: 638px) {
+  .checkboxGroup {
+  height: 274px;
+  }
+}
+@media only screen and (min-width: 1282px) {
+  .checkboxGroup {
+    height: 376px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
 .checkboxWrap {
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   column-gap: 124px;
   row-gap: 104px;
   margin-top: 24px;
+}
+@media only screen and (min-width: 520px) {
+  .checkboxWrap {
+  width: 75vw;
+  }
+}
+@media only screen and (min-width: 638px) {
+  .checkboxWrap {
+  width: 80vw;
+  }
+}
+@media only screen and (min-width: 1282px) {
+  .checkboxWrap {
+    width: 100%;
+  }
 }
 .checkboxLable {
   display: block;
@@ -155,5 +209,10 @@ option::checkmark {
 /* radio customize */
 .radioGroup {
   height: 168px;
-  margin-bottom: 40px;
+  margin-bottom: 24px;
+}
+@media only screen and (min-width: 1282px) {
+  .radioGroup {
+    margin-bottom: 40px;
+  }
 }

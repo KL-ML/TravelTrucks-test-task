@@ -20,7 +20,12 @@
   }
 }
 .cardH2 {
-  font: var(--h2-font-style);
+  font: var(--h2-font-style-mobile);
+}
+@media only screen and (min-width: 768px) {
+  .cardH2 {
+    font: var(--h2-font-style);
+  }
 }
 .headerH3 {
   font: var(--h3-font-style);

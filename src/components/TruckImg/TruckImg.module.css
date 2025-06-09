@@ -1,9 +1,14 @@
 .imgWrap {
-  width: 292px;
+  width: 100%;
   height: 100%;
   border-radius: 10px;
   overflow: hidden;
   background-color: var(--gray-light-color);
+}
+@media only screen and (min-width: 768px) {
+  .imgWrap {
+  width: 292px;
+  }
 }
 .img {
   height: 100%;

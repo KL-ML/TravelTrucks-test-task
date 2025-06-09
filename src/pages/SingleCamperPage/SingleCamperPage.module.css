@@ -20,7 +20,17 @@
 }
 .detailsWrap {
   display: grid;
-  grid-template-columns: 1fr 641px;
+  grid-template-columns: 1fr;
   gap: 40px;
   margin-top: 44px;
+}
+@media only screen and (min-width: 1082px) {
+  .detailsWrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .detailsWrap {
+    grid-template-columns: 1fr 641px;
+  }
 }
