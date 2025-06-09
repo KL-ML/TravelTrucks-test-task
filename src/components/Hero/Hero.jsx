@@ -16,7 +16,7 @@ export default function Hero() {
             You can find everything you want in our catalog
           </Heading>
           <Link to="/catalog">
-            <Button type="button" text="View Now" variant="filled" />
+            <Button btnType="button" text="View Now" variant="filled" />
           </Link>
         </div>
       </Section>

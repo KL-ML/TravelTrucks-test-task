@@ -81,7 +81,7 @@ export default function CatalogItem({ camper }) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Button type="button" text="Show more" variant="filled" />
+          <Button btnType="button" text="Show more" variant="filled" />
         </Link>
       </div>
     </div>
