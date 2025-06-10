@@ -24,11 +24,13 @@ export default function CatalogPage() {
     <>
       <Section variant="catalog">
         <FiltersForm />
-        {isLoading && <Loader variant={'catalog'} />}
-        {isError && (
-          <ErrorMessage text="There are no campers here!"></ErrorMessage>
-        )}
-        <CatalogList />
+        <div>
+          {isLoading && <Loader variant={'catalog'} />}
+          {isError && (
+            <ErrorMessage text="There are no campers here!"></ErrorMessage>
+          )}
+          {!isLoading && <CatalogList />}
+        </div>
       </Section>
     </>
   );
